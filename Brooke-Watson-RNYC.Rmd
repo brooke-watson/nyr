@@ -1,0 +1,314 @@
+---
+title: "Open Source Sampling: building and remixing packages in R"
+author: "<font face=Avenir> <br/>Brooke Watson <br/> Research Scientist, EcoHealth Alliance </font>"
+date: "<table style=\"border-style:none;padding-top:30px;\" class=\".table\">
+  <tr>
+    <th style=\"padding-right:75px!important\"><a href=\"https://twitter.com/brooklynevery1\"> <i class=\"fa fa-twitter\"></i> </a></th>
+    <th style=\"padding-left:75px!important\"><a href=\"https://github.com/brooke-watson\"> <i class=\"fa fa-github\"></i> </a></th>
+  </tr>
+  <tr style=\"background-color: Transparent\">
+    <th style=\"padding-right:75px!important\" ><a href=\"https://twitter.com/brooklynevery1\"> @brooklynevery1 </a></th>
+    <th style=\"padding-left:75px!important\"><a href=\"https://github.com/brooke-watson\"> @brooke-watson </a></th>
+  </tr></table>"
+output:
+  xaringan::moon_reader:
+    css: ["default", "bplots.css", "bplots-fonts.css"]
+    lib_dir: libs
+    nature: 
+      highlightLines: true 
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE,
+  collapse = TRUE, comment = "#>")
+options(htmltools.dir.version = FALSE)
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+![](figs/eha-brr.png)
+
+---
+
+class: center, middle, inverse
+background-image: url(https://static.highsnobiety.com/wp-content/uploads/2017/12/15001011/gucci-mane-el-gato-human-glacier-cover-001.jpg)
+
+# BRRR: the Package 
+
+--
+<audio controls>
+  <source src="https://raw.githubusercontent.com/brooke-watson/BRRR/master/inst/adlibs/gucci1.wav" type="audio/wav">
+</audio>
+
+<br>
+
+--
+
+<audio controls>
+  <source src="https://raw.githubusercontent.com/brooke-watson/BRRR/master/inst/adlibs/birdman1.wav" type="audio/wav">
+</audio>
+
+--
+
+```{r}
+devtools::install_github("brooke-watson/BRRR")
+library(BRRR)
+
+```
+
+---
+
+layout: false  
+
+## BRRR 
+
+- BRRR has one function: `skrrrahh()`, which plays a short rap ad lib when called. 
+
+```{r}
+devtools::install_github("brooke-watson/BRRR")
+library(BRRR)
+
+skrrrahh("bigshaq")
+```
+
+--
+
+<audio controls>
+  <source src="https://raw.githubusercontent.com/brooke-watson/BRRR/master/inst/adlibs/bigshaq.wav" type="audio/wav">
+</audio>
+
+
+---
+
+## BRRR is a kitchen timer for your code
+
+--
+
+...if your kitchen timer is a very congratulatory Flava Flav. 
+
+--
+```{r}
+
+    pkgs <- installed.packages()[, 1]
+    lapply(pkgs, update.packages())
+    skrrrahh("flava")
+    
+```
+
+--
+<span> <center>
+<img src="https://elhstalon.net/wp-content/uploads/2015/05/Flavsignaturelook.jpg" width="15%" height="auto" /> </center>
+</span>
+
+--
+
+<center>
+<audio controls>
+  <source src="https://raw.githubusercontent.com/brooke-watson/BRRR/master/inst/adlibs/flava.wav" type="audio/wav">
+</audio>
+</center>
+
+---
+
+<br><br>
+
+.left-column[
+
+- or Lil Jon 
+
+```{r}
+BRRR::skrrrahh("liljon")
+```
+
+![](https://media.giphy.com/media/BcPbK9ci4EU31qUTkR/giphy.gif)
+
+
+<audio controls>
+  <source src="https://raw.githubusercontent.com/brooke-watson/BRRR/master/inst/adlibs/liljon.wav" type="audio/wav">
+</audio>
+]
+
+--
+
+.right-column[
+
+- or Birdman.
+
+```{r}
+BRRR::skrrrahh("birdman1")
+```
+
+![](https://media.giphy.com/media/V8IAF3tC735Dy/giphy.gif)
+
+
+<audio controls>
+  <source src="https://raw.githubusercontent.com/brooke-watson/BRRR/master/inst/adlibs/birdman1.wav" type="audio/wav">
+</audio>
+
+]
+
+---
+
+## Some BRRR sounds are ideal for error messages
+
+```{r}
+f <- function(x) { 
+    if(!is.numeric(x)) { 
+        stop(BRRR::skrrrahh("khaled2")) 
+    } else return(x + 1)
+}
+
+f(1)
+f("character")
+
+```
+
+<center>
+<audio controls>
+  <source src="https://raw.githubusercontent.com/brooke-watson/BRRR/master/inst/adlibs/khaled2.wav" type="audio/wav">
+</audio>
+</center>
+
+---
+
+## ... or in tests.
+
+```{r}
+
+if (assertthat::are_equal(1+1, 2)) {
+    skrrrahh(1)
+} else skrrrahh(10)
+
+if (assertthat::are_equal(1+1, 3)) {
+    skrrrahh(1)
+} else skrrrahh(10)
+
+```
+
+<center>
+<audio controls>
+  <source src="https://raw.githubusercontent.com/brooke-watson/BRRR/master/inst/adlibs/twochainz.wav" type="audio/wav">
+</audio>
+
+<br>
+<br>
+
+<audio controls>
+  <source src="https://raw.githubusercontent.com/brooke-watson/BRRR/master/inst/adlibs/bigsean5.wav" type="audio/wav">
+</audio> 
+
+
+</center>
+
+---
+
+# There are many sounds to choose from.
+
+![](figs/sounds.png)
+
+--
+- If you (like me) are prone to caring Too Much about this, it is possible--nay, probable!--that I have neglected your Favorite Boy.
+--
+
+- If the above is true, I kindly suggest that you fork it! 
+--
+in Github. 
+
+
+---
+class: center, middle, inverse
+background-image: url(https://static.highsnobiety.com/wp-content/uploads/2017/12/15001011/gucci-mane-el-gato-human-glacier-cover-001.jpg)
+
+# BRRR: the Backstory
+
+---
+
+![](figs/bg1.png)
+
+<audio controls>
+  <source src="https://raw.githubusercontent.com/rasmusab/beepr/master/inst/sounds/smb_stage_clear.wav" type="audio/wav">
+</audio>
+
+
+---
+
+![](figs/bg2.png)
+
+---
+
+![](figs/bg3.png)
+
+---
+
+![](figs/bg4.png)
+
+---
+
+class: center, middle, inverse, .large
+
+## (One way to) make an R package
+
+--
+
+1. Copy something that exists
+
+--
+
+2. Add a thing you like
+
+--
+
+3. Keep adding
+
+--
+
+4. Add until your copy grows its own legs
+
+--
+
+5. Congratulations, you made ✨ A Thing! ✨
+
+---
+
+class: center, middle, inverse  
+
+.small[
+
+![](https://austinkleon.com/wp-content/uploads/2018/01/poster-8-600x800.gif)
+]
+
+---
+
+class: center, middle, inverse
+
+![](figs/ye.png)
+
+![](figs/ye2.png)
+
+![](figs/ye3.png)
+
+---
+
+class: center, middle, inverse
+
+## Contributing to Open Source
+
+![](https://imgs.xkcd.com/comics/prometheus.png)
+
+---
+
+class: inverse 
+
+# Resources 
+
+Twitter: [@brooklynevery1](https://twitter.com/brooklynevery1)
+
+Github: [brooke-watson](https://github.com/brooke-watson)
+
+The making of BRRR: [blog.brooke.science/posts/scraping-javascript-websites-in-r/](https://blog.brooke.science/posts/scraping-javascript-websites-in-r/)
+
+--
+.center[
+![](figs/lit.png)
+]
+
