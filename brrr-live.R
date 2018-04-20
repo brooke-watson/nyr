@@ -1,7 +1,5 @@
 devtools::install_github("brooke-watson/BRRR")
-
 library(BRRR)
-skrrrahh()
 
 ##' BRRR is a kitchen timer for your code
 
@@ -26,7 +24,7 @@ f <- function(x) {
         stop(BRRR::skrrrahh("khaled2")) 
     } else return(x + 1)
 }
-
+ 
 f(1)
 f("character")
 

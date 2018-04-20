@@ -1,6 +1,8 @@
 ---
 title: "Open Source Sampling: building and remixing packages in R"
-author: "<font face=Avenir> <br/>Brooke Watson <br/> Research Scientist, EcoHealth Alliance </font>"
+author: "<font face=Avenir> <br/>Brooke Watson <br/> Research Scientist, EcoHealth Alliance </font><br><audio controls>
+  <source src='https://raw.githubusercontent.com/brooke-watson/BRRR/master/inst/adlibs/gucci.wav' type='audio/wav'>
+</audio>"
 date: "<table style=\"border-style:none;padding-top:30px;\" class=\".table\">
   <tr>
     <th style=\"padding-right:75px!important\"><a href=\"https://twitter.com/brooklynevery1\"> <i class=\"fa fa-twitter\"></i> </a></th>
@@ -246,7 +248,11 @@ background-image: url(https://static.highsnobiety.com/wp-content/uploads/2017/12
 
 class: center, middle, inverse, .large
 
-## (One way to) make an R package
+## (One way to) become an open source contributor
+
+<audio controls>
+  <source src='https://raw.githubusercontent.com/brooke-watson/BRRR/master/inst/adlibs/khaled1.wav' type='audio/wav'>
+</audio>
 
 --
 
@@ -273,7 +279,6 @@ class: center, middle, inverse, .large
 class: center, middle, inverse  
 
 .small[
-
 ![](https://austinkleon.com/wp-content/uploads/2018/01/poster-8-600x800.gif)
 ]
 
@@ -293,6 +298,8 @@ class: center, middle, inverse
 
 ## Contributing to Open Source
 
+--
+
 ![](https://imgs.xkcd.com/comics/prometheus.png)
 
 ---
@@ -300,6 +307,8 @@ class: center, middle, inverse
 class: center, middle, inverse
 
 ## Contributing to Open Source
+
+--
 
 ![](figs/lit.png)
 
@@ -312,6 +321,6 @@ class: inverse
 
 Twitter: [@brooklynevery1](https://twitter.com/brooklynevery1)
 
-These slides on Github: [brooke-watson](https://github.com/brooke-watson/nyr)
+These slides on Github: [github.com/brooke-watson/nyr](https://github.com/brooke-watson/nyr)
 
 The making of BRRR: [blog.brooke.science/posts/scraping-javascript-websites-in-r/](https://blog.brooke.science/posts/scraping-javascript-websites-in-r/)
