@@ -297,18 +297,21 @@ class: center, middle, inverse
 
 ---
 
+class: center, middle, inverse
+
+## Contributing to Open Source
+
+![](figs/lit.png)
+
+
+---
+
 class: inverse 
 
 # Resources 
 
 Twitter: [@brooklynevery1](https://twitter.com/brooklynevery1)
 
-Github: [brooke-watson](https://github.com/brooke-watson)
+These slides on Github: [brooke-watson](https://github.com/brooke-watson/nyr)
 
 The making of BRRR: [blog.brooke.science/posts/scraping-javascript-websites-in-r/](https://blog.brooke.science/posts/scraping-javascript-websites-in-r/)
-
---
-.center[
-![](figs/lit.png)
-]
-
